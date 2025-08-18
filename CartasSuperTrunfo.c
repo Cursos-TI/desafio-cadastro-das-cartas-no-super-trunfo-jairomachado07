@@ -26,6 +26,11 @@ int main() {
     scanf("%f", &pbi);
     printf("Digite o numero de pontos turisticos (inteiro): ");
     scanf("%d", &npontosturisticos);
+
+    //Criando os dados estatisticos adicionais(PIB per capita e Densidade populacional)
+    float densidade_populacional = populacao / area;
+    float pbi_per_capita = pbi / populacao;
+
     //Entrada dos dados da segunda cidade
     printf("Digite o estado 2(letra): ");
     scanf(" %c", &estado2);
@@ -41,7 +46,12 @@ int main() {
     scanf("%f", &pbi2);
     printf("Digite o numero de pontos turisticos (inteiro): ");
     scanf("%d", &npontosturisticos2);
-    //mostrando os dados de cada uma das cartas    
+
+    //Criando os dados estatisticos adicionais da cidade 2(PIB per capita e Densidade populacional)
+    float densidade_populacional2 = populacao2 / area2;
+    float pbi_per_capita2 = pbi2 / populacao2;
+
+    //mostrando os dados d primeira carta    
     printf("Super Trunfo!\n");
     printf("Estado: %c\n", estado);
     printf("Codigo: %s\n", codigo);
@@ -50,6 +60,10 @@ int main() {
     printf("Area: %.2f\n", area);
     printf("PBI: %.2f\n", pbi);
     printf("Numero de Pontos Turisticos: %d\n", npontosturisticos);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional);
+    printf("PBI per Capita: %.2f\n reais", pbi_per_capita);
+
+    //mostrando os dados da segunda carta
     printf("\n");
     printf("Estado: %c\n", estado2);
     printf("Codigo: %s\n", codigo2);
@@ -58,6 +72,8 @@ int main() {
     printf("Area: %.2f\n", area2);
     printf("PBI: %.2f\n", pbi2);
     printf("Numero de Pontos Turisticos: %d\n", npontosturisticos2);
+    printf("Densidade Populacional: %.2f\n hab/km²", densidade_populacional2);
+    printf("PBI per Capita: %.2f\n reais", pbi_per_capita2);
     
     return 0;
 }
