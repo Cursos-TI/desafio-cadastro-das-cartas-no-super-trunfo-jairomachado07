@@ -26,6 +26,14 @@ int main() {
     scanf("%f", &pbi);
     printf("Digite o numero de pontos turisticos (inteiro): ");
     scanf("%d", &npontosturisticos);
+
+    //Criando os dados estatisticos adicionais(PIB per capita e Densidade populacional)
+    float densidade_populacional = populacao / area;
+    float pbi_per_capita = pbi / populacao;
+
+    //Caulculando o SuperPower da carta 1
+    float superpower1 = (float)populacao + area + pbi + (float)npontosturisticos + (float)pbi_per_capita + (1-(float)densidade_populacional);
+
     //Entrada dos dados da segunda cidade
     printf("Digite o estado 2(letra): ");
     scanf(" %c", &estado2);
@@ -41,7 +49,15 @@ int main() {
     scanf("%f", &pbi2);
     printf("Digite o numero de pontos turisticos (inteiro): ");
     scanf("%d", &npontosturisticos2);
-    //mostrando os dados de cada uma das cartas    
+
+    //Criando os dados estatisticos adicionais da cidade 2(PIB per capita e Densidade populacional)
+    float densidade_populacional2 = populacao2 / area2;
+    float pbi_per_capita2 = pbi2 / populacao2;
+
+    //Caulculando o SuperPower da carta 2
+    float superpower2 = (float)populacao2 + area2 + pbi2 + (float)npontosturisticos2 + (float)pbi_per_capita2 +(1- (float)densidade_populacional2);
+
+    //mostrando os dados d primeira carta    
     printf("Super Trunfo!\n");
     printf("Estado: %c\n", estado);
     printf("Codigo: %s\n", codigo);
@@ -50,6 +66,10 @@ int main() {
     printf("Area: %.2f\n", area);
     printf("PBI: %.2f\n", pbi);
     printf("Numero de Pontos Turisticos: %d\n", npontosturisticos);
+    printf("Densidade Populacional: %.2f\n hab/km²", densidade_populacional);
+    printf("PBI per Capita: %.2f\n reais", pbi_per_capita);
+
+    //mostrando os dados da segunda carta
     printf("\n");
     printf("Estado: %c\n", estado2);
     printf("Codigo: %s\n", codigo2);
@@ -58,6 +78,21 @@ int main() {
     printf("Area: %.2f\n", area2);
     printf("PBI: %.2f\n", pbi2);
     printf("Numero de Pontos Turisticos: %d\n", npontosturisticos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional2);
+    printf("PBI per Capita: %.2f reais\n", pbi_per_capita2);
     
+    //Mostrando qual carta é a vencedora
+    //Se o número entre parentereses for um, a carta 1 venceu, se for zero, a carta 2 venceu.
+    printf("\n");
+    printf("Comparação das cartas:\n");
+    printf("População: Carta 1 venceu (%d)\n", populacao > populacao2 ? 1 : 0);
+    printf("Área: Carta 1 venceu (%d)\n", area > area2 ? 1 : 0);
+    printf("PBI: Carta 1 venceu (%d)\n", pbi > pbi2 ? 1 : 0);
+    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", npontosturisticos > npontosturisticos2 ? 1 : 0);
+    printf("Densidade Populacional: Carta 2 venceu (%d)\n", densidade_populacional < densidade_populacional2 ? 1 : 0);
+    printf("PIB per Capita: Carta 1 venceu (%d)\n", pbi_per_capita > pbi_per_capita2 ? 1 : 0);
+    printf("Super Poder: Carta 1 venceu (%d)\n", superpower1 > superpower2 ? 1 :
+0);
+
     return 0;
 }
