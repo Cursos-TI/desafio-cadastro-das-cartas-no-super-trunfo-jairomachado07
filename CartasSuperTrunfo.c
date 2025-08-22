@@ -31,12 +31,9 @@ int main() {
     float densidade_populacional = populacao / area;
     float pbi_per_capita = pbi / populacao;
 
-<<<<<<< HEAD
     //Caulculando o SuperPower da carta 1
     float superpower1 = (float)populacao + area + pbi + (float)npontosturisticos + (float)pbi_per_capita + (1-(float)densidade_populacional);
 
-=======
->>>>>>> 2a0885e96a4e85ded0211adfff4fe95c56593238
     //Entrada dos dados da segunda cidade
     printf("Digite o estado 2(letra): ");
     scanf(" %c", &estado2);
@@ -57,12 +54,9 @@ int main() {
     float densidade_populacional2 = populacao2 / area2;
     float pbi_per_capita2 = pbi2 / populacao2;
 
-<<<<<<< HEAD
     //Caulculando o SuperPower da carta 2
     float superpower2 = (float)populacao2 + area2 + pbi2 + (float)npontosturisticos2 + (float)pbi_per_capita2 +(1- (float)densidade_populacional2);
 
-=======
->>>>>>> 2a0885e96a4e85ded0211adfff4fe95c56593238
     //mostrando os dados d primeira carta    
     printf("Super Trunfo!\n");
     printf("Estado: %c\n", estado);
@@ -72,11 +66,9 @@ int main() {
     printf("Area: %.2f\n", area);
     printf("PBI: %.2f\n", pbi);
     printf("Numero de Pontos Turisticos: %d\n", npontosturisticos);
-<<<<<<< HEAD
+
     printf("Densidade Populacional: %.2f\n hab/km²", densidade_populacional);
-=======
     printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional);
->>>>>>> 2a0885e96a4e85ded0211adfff4fe95c56593238
     printf("PBI per Capita: %.2f\n reais", pbi_per_capita);
 
     //mostrando os dados da segunda carta
@@ -88,13 +80,10 @@ int main() {
     printf("Area: %.2f\n", area2);
     printf("PBI: %.2f\n", pbi2);
     printf("Numero de Pontos Turisticos: %d\n", npontosturisticos2);
-<<<<<<< HEAD
     printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional2);
     printf("PBI per Capita: %.2f reais\n", pbi_per_capita2);
-=======
     printf("Densidade Populacional: %.2f\n hab/km²", densidade_populacional2);
     printf("PBI per Capita: %.2f\n reais", pbi_per_capita2);
->>>>>>> 2a0885e96a4e85ded0211adfff4fe95c56593238
     
     //Mostrando qual carta é a vencedora
     //Se o número entre parentereses for um, a carta 1 venceu, se for zero, a carta 2 venceu.
